@@ -2,7 +2,7 @@
 
 An MCP (Model Context Protocol) server that lets AI assistants like Claude read, edit, and compile your [Overleaf](https://www.overleaf.com) projects.
 
-> **Note:** This server is built on MCP 2.0 (using the FastMCP framework) — make sure your MCP client is up to date.
+> **MCP spec compatibility:** This server is built on FastMCP 3.x, which targets the classic handshake-based MCP spec (2025-11-25 and earlier) — it does **not** yet implement the stateless [2026-07-28 spec](https://blog.modelcontextprotocol.io/posts/2026-07-28/) ("MCP 2.0"). Current clients (Claude Code, Claude Desktop, etc.) still support handshake-era servers, so it works fine today. It will move to the stateless spec once FastMCP 4 is released.
 
 Works with **free Overleaf accounts** — no premium Git integration required. It authenticates with your browser session cookie and talks to Overleaf's web API via [pyoverleaf](https://github.com/jkulhanek/pyoverleaf).
 
